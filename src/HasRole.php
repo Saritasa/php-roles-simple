@@ -1,6 +1,6 @@
 <?php
 
-namespace Saritasa;
+namespace Saritasa\Roles;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use ReflectionClass;
