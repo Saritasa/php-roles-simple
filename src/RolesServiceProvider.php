@@ -19,10 +19,6 @@ class RolesServiceProvider extends ServiceProvider
         }
     }
 
-    public function register()
-    {
-    }
-
     /**
      * Register Blade extensions.
      *

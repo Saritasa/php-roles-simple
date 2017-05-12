@@ -1,5 +1,5 @@
 {
-    "name": "saritasa/php-roles-simple",
+    "name": "saritasa/roles-simple",
     "type": "library",
     "description": "User has field role_id and corresponding lookup table",
     "keywords": ["php", "saritasa"],
