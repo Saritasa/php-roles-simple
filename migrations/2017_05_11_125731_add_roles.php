@@ -13,8 +13,8 @@ class AddRoles extends Migration
      */
     public function up()
     {
-        Role::firstOrCreate(['name' => 'Admin']);
         Role::firstOrCreate(['name' => 'User']);
+        Role::firstOrCreate(['name' => 'Admin']);
     }
 
     /**
@@ -24,7 +24,7 @@ class AddRoles extends Migration
      */
     public function down()
     {
-        Role::whereName('Admin')->delete();
         Role::whereName('User')->delete();
+        Role::whereName('Admin')->delete();
     }
 }
