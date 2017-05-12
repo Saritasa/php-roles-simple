@@ -20,6 +20,12 @@ Add the RolesServiceProvider service provider ``config/app.php``:
 )
 ```
 
+Then publish DB migrations:
+
+```bash
+php artisan vendor:publish --provider=Saritasa\\Roles\\RolesServiceProvider
+```
+
 ## Available classes
 
 ### HasRoles
