@@ -5,6 +5,7 @@ namespace Saritasa\Roles;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use ReflectionClass;
 use Saritasa\Exceptions\NotImplementedException;
+use Saritasa\Roles\Models\Role;
 
 /**
  * Trait to add to your User model
@@ -26,7 +27,7 @@ trait HasRole
         if (is_int($role)) {
             return $this->role_id == $role;
         } else if (is_string($role)) {
-            return $this->role->name == $role;
+            return strcasecmp($this->role->slug, $role);
         } else {
             throw new NotImplementedException("function hasRole() accepts either int (role_id) or string (role name). "
                 .gettype($role)." was given");

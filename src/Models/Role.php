@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
  * User role
  *
  * @property int $id Identifier
+ * @property string $name Role name, visible to user
+ * @property string $slug Role human-readable identifier
  */
 class Role extends Model
 {
@@ -20,6 +22,7 @@ class Role extends Model
     ];
 
     protected $fillable = [
-        'name'
+        'name',
+        'slug'
     ];
 }
