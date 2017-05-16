@@ -3,6 +3,7 @@
 namespace Saritasa\Roles;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Saritasa\Roles\Models\Role;
 
 interface IHasRole
 {

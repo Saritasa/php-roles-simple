@@ -3,7 +3,6 @@
 namespace Saritasa\Roles;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use ReflectionClass;
 use Saritasa\Exceptions\NotImplementedException;
 use Saritasa\Roles\Models\Role;
 
