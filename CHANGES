@@ -1,3 +1,11 @@
+1.0.3
+-----
+- Fix namespace
+
+1.0.2
+-----
+- Add slug to role
+
 1.0.1
 -----
 - Fixes, DB Migrations
