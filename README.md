@@ -111,10 +111,6 @@ If user does not have required role, **AccessDeniedHttpException** will be throw
 ## Contributing
 
 ### Requirements
-This package must:
-* Do not depend on any framework or library
-* Do not depend on other Saritasa packages
-* Do not register any providers
 
 1. Create fork
 2. Checkout fork
