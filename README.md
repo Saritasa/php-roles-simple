@@ -53,6 +53,17 @@ record from lookup table.
 You can use built-in class *Saritasa\Roles\Models\Role* to list of models
 or create new roles in migrations or in code.
 
+Role model contains 3 fields:
+
+* **id** (integer) - primary key
+* **name** (string) - supposed to be visible to user and may change, as needed.
+May contain any characters (including spaces), in any case.
+Do not use role name as identifier (ex. to search by it).
+* **slug** (string) - human-readable role identifier, supposed to be constant,
+while name can be changed. You can reference role by slug in code (ex. in *hasRole()* method).
+It's recommended to keep slugs in lowercase,
+use underscore or dash instead of spaces.
+
 ```
 class AddRoles extends Migration
 {
