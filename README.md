@@ -40,17 +40,17 @@ class User extends Model implements IHasRoles
 ```
 then somewere in code:
 ```php
-if ($user->hasRole(Roles::Admin)) { ... }}
+if ($user->hasRole(Roles::ADMIN)) { ... }}
 $user->role->name;
 ```
 
 **hasRole($role)** method can accept either role ID (integer) or
 role slug (string).
-Using role ID is a bit faster, because does not requires reading role
+Using role ID is a bit faster, because does not require reading role
 record from lookup table.
 
 ### Role (model)
-You can use built-in class Saritasa\Roles\Models\Role to list of models
+You can use built-in class *Saritasa\Roles\Models\Role* to list of models
 or create new roles in migrations or in code.
 
 ```
@@ -81,7 +81,7 @@ class AddRoles extends Migration
 ```
 
 ### Roles (enum)
-Package contains enum Saritasa\Roles\Enums\Roles, which has 2 predefined
+Package contains enum *Saritasa\Roles\Enums\Roles*, which has 2 predefined
 roles: User and Admin, which is suitable for many applications.
 
 But you are not limited to these roles, you can define your own enum
@@ -90,20 +90,22 @@ But you are not limited to these roles, you can define your own enum
 ```
 class Roles extends Enum
 {
-    const User = 1;
-    const SuperAdmin = 2;
-    const SchoolAdmin = 3;
+    const USER = 1;
+    const SUPER_ADMIN = 2;
+    const SCHOOL_ADMIN = 3;
 }
 ```
 
 ## Middleware
-You can use middleware in routes to limit access to certain pages
+You can use middleware in routes to limit access to certain pages:
 ```
 Router::get('/admin', [
     'as' => 'admin.dashboard',
     'middlware' => 'role:admin'
 ]
 ```
+Middleware is registered by ServiceProvider, no need to register it manually.
+Format is *role:role_slug*. Only one role is supported at current moment.
 If user does not have required role, **AccessDeniedHttpException** will be thrown
 
 ## Contributing

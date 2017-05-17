@@ -9,7 +9,7 @@ use Saritasa\Enum;
  */
 class Roles extends Enum
 {
-    const None = 0;
-    const User = 1;
-    const Admin = 2;
+    const NONE = 0;
+    const USER = 1;
+    const ADMIN = 2;
 }
