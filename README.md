@@ -1,7 +1,7 @@
 # Saritasa Roles for Laravel
 
 Simplified implementation of user roles for Laravel applications:
-User has role_id field, and corresponding roles table exists
+User has role_id field, and corresponding roles lookup table exists.
 
 ## Usage
 
@@ -104,8 +104,12 @@ Router::get('/admin', [
     'middlware' => 'role:admin'
 ]
 ```
-Middleware is registered by ServiceProvider, no need to register it manually.
-Format is *role:role_slug*. Only one role is supported at current moment.
+Middleware with alias is registered by service provider, no need to register it manually.
+
+Format is *role:role_slug*.
+
+Only one role is supported at current moment.
+
 If user does not have required role, **AccessDeniedHttpException** will be thrown
 
 ## Contributing
