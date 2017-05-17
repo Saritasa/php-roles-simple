@@ -5,7 +5,7 @@ namespace Saritasa\Roles\Enums;
 use Saritasa\Enum;
 
 /**
- * Human gender - Male or Female
+ * Basic roles enumeration: User & Admin.
  */
 class Roles extends Enum
 {
