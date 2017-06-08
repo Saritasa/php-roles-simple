@@ -1,3 +1,9 @@
+1.0.5
+-----
+- Fix VerifyRole middleware
+- Allow to specify list of possible roles
+- Update README
+
 1.0.4
 - Update README
 
