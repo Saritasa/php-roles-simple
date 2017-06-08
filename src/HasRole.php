@@ -26,7 +26,7 @@ trait HasRole
         if (is_int($role)) {
             return $this->role_id == $role;
         } else if (is_string($role)) {
-            return strcasecmp($this->role->slug, $role);
+            return strcasecmp($this->role->slug, $role) == 0;
         } else {
             throw new NotImplementedException("function hasRole() accepts either int (role_id) or string (role name). "
                 .gettype($role)." was given");
