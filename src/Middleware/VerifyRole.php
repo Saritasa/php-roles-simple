@@ -38,7 +38,7 @@ class VerifyRole
      */
     public function handle(Request $request, Closure $next, $role)
     {
-        if ($this->auth->check()) {
+        if (!$this->auth->check()) {
             throw new AccessDeniedHttpException(trans('roles::errors.not_logged_in'));
         }
         /* @var  User $user */
