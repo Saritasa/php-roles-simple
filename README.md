@@ -117,11 +117,9 @@ Router::get('/admin', [
 ```
 Middleware with alias is registered by service provider, no need to register it manually.
 
-Format is *role:role_slug*.
+Format is *role:role_slug1,role_slug2,role_slug3*.
 
-Only one role is supported at current moment.
-
-If user does not have required role, **AccessDeniedHttpException** will be thrown
+If user does not have any of required roles, **AccessDeniedHttpException** will be thrown
 
 ## Contributing
 
