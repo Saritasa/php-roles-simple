@@ -1,10 +1,9 @@
 {
   "providers": [
-    'Saritasa\\Roles\\RolesServiceProvider'
+    "Saritasa\\Roles\\RolesServiceProvider"
   ],
   "aliases": [
     {
-//      'roles': 'Saritasa\\Roles\\Middleware\\VerifyRole'
     }
   ]
 }

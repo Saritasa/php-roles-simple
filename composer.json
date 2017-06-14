@@ -2,12 +2,12 @@
     "name": "saritasa/php-roles-simple",
     "type": "library",
     "description": "User has field role_id and corresponding lookup table",
-    "keywords": ["php", "saritasa"],
+    "keywords": ["laravel", "middleware", "roles", "security"],
     "license": "MIT",
     "authors": [
         {
             "name": "Sergey Populov",
-            "email": "sergey@gmail.com"
+            "email": "sergey@saritasa.com"
         }
     ],
     "require": {

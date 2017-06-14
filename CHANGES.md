@@ -1,8 +1,11 @@
+# Changes History
+
 1.0.6
 -----
 - Fixes
 - Allow to specify list of possible roles
 - Update README
+
 1.0.5
 -----
 Update dependencies versions
