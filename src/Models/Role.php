@@ -2,6 +2,7 @@
 
 namespace Saritasa\Roles\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -10,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id Identifier
  * @property string $name Role name, visible to user
  * @property string $slug Role human-readable identifier
+ * @method static Builder|Role whereSlug($role)
+ * @mixin \Eloquent
  */
 class Role extends Model
 {
