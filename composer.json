@@ -19,6 +19,9 @@
     "require-dev": {
         "phpunit/phpunit": "^6.0"
     },
+    "conflict": {
+        "bican/roles": "^2.0"
+    },
     "minimum-stability": "stable",
     "autoload": {
         "psr-4" : {
@@ -33,5 +36,5 @@
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
-    }
+    },
 }
