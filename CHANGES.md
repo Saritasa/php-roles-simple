@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.7
+-----
+- Added check to exists the user role in the \Saritasa\Roles\HasRole::hasRole().
+
 1.0.6
 -----
 - Fixes

@@ -23,13 +23,17 @@ trait HasRole
 
     public function hasRole($role): bool
     {
-        if (is_int($role)) {
-            return $this->role_id == $role;
-        } else if (is_string($role)) {
-            return strcasecmp($this->role->slug, $role) == 0;
-        } else {
-            throw new NotImplementedException("function hasRole() accepts either int (role_id) or string (role name). "
-                .gettype($role)." was given");
+        if ($this->role) {
+            if (is_int($role)) {
+                return $this->role_id == $role;
+            } elseif (is_string($role)) {
+                return strcasecmp($this->role->slug, $role) == 0;
+            } else {
+                throw new NotImplementedException("function hasRole() accepts either int (role_id) or string (role name). "
+                    . gettype($role) . " was given");
+            }
         }
+
+        return false;
     }
 }
