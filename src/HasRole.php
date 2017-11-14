@@ -23,7 +23,7 @@ trait HasRole
 
     public function hasRole($role): bool
     {
-        if ($this->role) {
+        if ($this->role_id) {
             if (is_int($role)) {
                 return $this->role_id == $role;
             } elseif (is_string($role)) {
