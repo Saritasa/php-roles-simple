@@ -22,7 +22,6 @@
     "conflict": {
         "bican/roles": "^2.0"
     },
-    "minimum-stability": "stable",
     "autoload": {
         "psr-4" : {
             "Saritasa\\Roles\\": "src/"
