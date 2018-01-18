@@ -1,5 +1,7 @@
 # Saritasa Roles for Laravel
 
+[![Build Status](https://travis-ci.org/Saritasa/php-roles-simple.svg?branch=master)](https://travis-ci.org/Saritasa/php-roles-simple)
+
 Simplified implementation of user roles for Laravel applications:
 User has role_id field, and corresponding roles lookup table exists.
 
