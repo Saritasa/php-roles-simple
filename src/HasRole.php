@@ -48,8 +48,10 @@ trait HasRole
             } elseif (is_string($role)) {
                 return strcasecmp($this->role->slug, $role) == 0;
             } else {
-                throw new NotImplementedException("function hasRole() accepts either int (role_id) or string (role name). "
-                    . gettype($role) . " was given");
+                throw new NotImplementedException(
+                    "function hasRole() accepts either int (role_id) or string (role name). "
+                    . gettype($role) . " was given"
+                );
             }
         }
 
