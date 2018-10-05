@@ -12,6 +12,8 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 class VerifyRole
 {
     /**
+     * Secutity Guard, that checks, if user if authenticated or not
+     *
      * @var \Illuminate\Contracts\Auth\Guard
      */
     protected $auth;
@@ -19,7 +21,7 @@ class VerifyRole
     /**
      * Create a new filter instance.
      *
-     * @param \Illuminate\Contracts\Auth\Guard $auth
+     * @param \Illuminate\Contracts\Auth\Guard $auth Secutity Guard, that checks, if user if authenticated or not
      */
     public function __construct(Guard $auth)
     {
@@ -29,9 +31,10 @@ class VerifyRole
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
-     * @param array ...$roles
+     * @param  \Illuminate\Http\Request $request HTTP Request
+     * @param  \Closure $next Next middleware handler
+     * @param array ...$roles If user doesn't have any of these roles, access will be denied
+     * @throws AccessDeniedHttpException
      * @return mixed
      */
     public function handle(Request $request, Closure $next, ...$roles)

@@ -11,16 +11,35 @@ use Saritasa\Roles\Models\Role;
  */
 trait HasRole
 {
+    /**
+     * Relation between Users and Roles tables.
+     *
+     * @return BelongsTo
+     */
     public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class);
     }
 
+    /**
+     * Get user's role entity
+     *
+     * @return Role
+     */
     public function getRole(): Role
     {
         return (!$this->role) ? $this->role = $this->role()->get() : $this->role;
     }
 
+    /**
+     * Check, if user has specified role
+
+     * @param int|string $role Role to check. Either role ID or role slug.
+     *                         If int is passed, then it's role ID, and check is performed without loading Role model.
+     *                         Otherwise, it will require to load role relation
+     * @return boolean
+     * @throws NotImplementedException
+     */
     public function hasRole($role): bool
     {
         if ($this->role_id) {
