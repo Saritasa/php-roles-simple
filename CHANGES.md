@@ -2,7 +2,7 @@
 
 1.0.8
 -----
-- Added check to exists the user role in the \Saritasa\Roles\HasRole::hasRole().
+- Added check if user role exists in the \Saritasa\Roles\HasRole::hasRole().
 
 1.0.7
 -----
