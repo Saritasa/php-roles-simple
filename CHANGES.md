@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.8
+-----
+- Added check to exists the user role in the \Saritasa\Roles\HasRole::hasRole().
+
 1.0.7
 -----
 - Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
