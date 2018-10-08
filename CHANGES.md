@@ -1,5 +1,10 @@
 # Changes History
 
+1.0.9
+-----
+- Added using of the IHasRole interface in the middleware.
+
+
 1.0.8
 -----
 - Added check to exists the user role in the \Saritasa\Roles\HasRole::hasRole().
