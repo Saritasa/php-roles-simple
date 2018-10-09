@@ -2,12 +2,12 @@
 
 1.0.9
 -----
-- Added using of the IHasRole interface in the middleware.
+- Use IHasRole interface in the middleware (rather than User class)
 
 
 1.0.8
 -----
-- Added check if user role exists in the \Saritasa\Roles\HasRole::hasRole().
+- Added check if user role exists in the \Saritasa\Roles\HasRole::hasRole()
 
 1.0.7
 -----
