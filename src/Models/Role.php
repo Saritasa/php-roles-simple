@@ -2,30 +2,31 @@
 
 namespace Saritasa\Roles\Models;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * User role
+ * User role. Can be used to segregate allowed functionality in application.
  *
- * @property int $id Identifier
+ * @property integer $id Unique role identifier
  * @property string $name Role name, visible to user
  * @property string $slug Role human-readable identifier
- * @method static Builder|Role whereSlug($role)
- * @mixin \Eloquent
  */
 class Role extends Model
 {
+    const ID = 'id';
+    const NAME = 'name';
+    const SLUG = 'slug';
+
     protected $table = 'roles';
     public $timestamps = false;
 
     protected $visible = [
-        'id',
-        'name'
+        self::ID,
+        self::NAME,
     ];
 
     protected $fillable = [
-        'name',
-        'slug'
+        self::NAME,
+        self::SLUG,
     ];
 }
