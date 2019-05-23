@@ -10,10 +10,10 @@ User has role_id field, and corresponding roles lookup table exists.
 
 ## Usage
 
-Install the ```saritasa/php-roles-simple``` package:
+Install the ```saritasa/roles-simple``` package:
 
 ```bash
-$ composer require saritasa/php-roles-simple
+$ composer require saritasa/roles-simple
 ```
 
 If you use Laravel 5.4 or less,
