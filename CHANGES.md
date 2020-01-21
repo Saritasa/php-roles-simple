@@ -1,5 +1,9 @@
 # Changes History
 
+1.1.0
+-----
+Declare compatibility with Laravel 6
+
 1.0.9
 -----
 - Use IHasRole interface in the middleware (rather than User class)
