@@ -1,5 +1,9 @@
 # Changes History
 
+1.1.1
+-----
+Allow to set Role ID (for predictable DB migrations)
+
 1.1.0
 -----
 Declare compatibility with Laravel 6
