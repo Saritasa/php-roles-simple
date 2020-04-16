@@ -26,6 +26,7 @@ class Role extends Model
     ];
 
     protected $fillable = [
+        self::ID,
         self::NAME,
         self::SLUG,
     ];
