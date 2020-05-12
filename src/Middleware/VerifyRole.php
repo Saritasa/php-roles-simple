@@ -5,8 +5,10 @@ namespace Saritasa\Roles\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Saritasa\Roles\IHasRole;
+use Saritasa\Roles\Models\Role;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class VerifyRole
@@ -55,6 +57,19 @@ class VerifyRole
             }
         }
 
-        throw new AccessDeniedHttpException(trans('roles::errors.role_required', ['role' => implode(', ', $roles)]));
+        $labels = [];
+        foreach ($roles as $role) {
+            if (is_int($role) || is_string($role) && preg_match('/^\d+$/', $role)) {
+                $labels[] = Role::find($role)->name ?: $role;
+            } elseif ($role instanceof Model) {
+                $labels[] = $role->name;
+            } else {
+                $labels[] = $role;
+            }
+        }
+
+        throw new AccessDeniedHttpException(trans_choice('roles::errors.role_required', count($labels), [
+            'role' => implode(', ', $labels)
+        ]));
     }
 }

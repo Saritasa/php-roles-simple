@@ -1,5 +1,9 @@
 # Changes History
 
+1.2.1
+-----
+Improve error display
+
 1.2.0
 -----
 Make compatible with Voyager built-in roles. See https://voyager.devdojo.com
