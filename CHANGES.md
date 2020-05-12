@@ -1,5 +1,9 @@
 # Changes History
 
+1.2.0
+-----
+Make compatible with Voyager built-in roles. See https://voyager.devdojo.com
+
 1.1.1
 -----
 Allow to set Role ID (for predictable DB migrations)

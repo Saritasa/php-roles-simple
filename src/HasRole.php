@@ -40,10 +40,10 @@ trait HasRole
      * @return boolean
      * @throws NotImplementedException
      */
-    public function hasRole($role): bool
+    public function hasRole($role)
     {
         if ($this->role_id) {
-            if (is_int($role)) {
+            if (is_int($role) || preg_match('/^\d+$/', $role)) {
                 return $this->role_id == $role;
             } elseif (is_string($role)) {
                 return strcasecmp($this->role->slug, $role) == 0;

@@ -27,5 +27,5 @@ interface IHasRole
      * @param int|string $role Role to check. Either role ID or role slug.
      * @return boolean
      */
-    public function hasRole($role): bool;
+    public function hasRole($role);
 }
