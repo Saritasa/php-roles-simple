@@ -1,6 +1,6 @@
 # Saritasa Roles for Laravel
 
-[![Build Status](https://travis-ci.org/Saritasa/php-roles-simple.svg?branch=master)](https://travis-ci.org/Saritasa/php-roles-simple)
+[![PHP CodeSniffer](https://github.com/Saritasa/php-roles-simple/workflows/PHP%20Codesniffer/badge.svg)](https://github.com/Saritasa/php-roles-simple/actions)
 [![Release](https://img.shields.io/github/release/saritasa/php-roles-simple.svg)](https://github.com/Saritasa/php-roles-simple/releases)
 [![PHPv](https://img.shields.io/packagist/php-v/saritasa/roles-simple.svg)](http://www.php.net)
 [![Downloads](https://img.shields.io/packagist/dt/saritasa/roles-simple.svg)](https://packagist.org/packages/saritasa/roles-simple)
